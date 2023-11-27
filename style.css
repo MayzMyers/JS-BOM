@@ -1,0 +1,13 @@
+body{
+    padding: 20px;
+}
+form{
+    padding: 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    row-gap: 5px;
+}
+a{
+    margin-right: 30px;
+}

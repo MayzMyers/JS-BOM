@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ссылка и расчет</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="inactive" href="http://ya.ru">http://ya.ru</a>
+    <form action="">
+      <div>
+        <label for="name">Начислено</label>
+        <input type="text" value="" id="accured" />
+      </div>
+      <div>
+        <label for="name">Удержано</label>
+        <input type="text" value="" id="withheld" />
+      </div>
+      <div>
+        <label for="name">Итого</label>
+        <input type="text" value="" id="result" readonly />
+      </div>
+      <input type="button" value="Подсчитать" id="btn" />
+    </form>
+    <a id="back" href="">back</a>
+  </body>
+  <script>
+    document.querySelector(".inactive").onclick = function () {
+      event.preventDefault();
+    };
+    btn.onclick = function () {
+      if (isNaN(accured.value) || isNaN(withheld.value))
+        alert(`Некорректный ввод`);
+      else if (accured.value.length == 0 || withheld.value.length == 0)
+        alert(`Введите значения`);
+      else {
+        result.value = accured.value - withheld.value;
+      }
+    };
+    back.onclick = function () {
+      window.history.back();
+      return false;
+    };
+  </script>
+</html>

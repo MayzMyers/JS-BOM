@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Информация о экране</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="button" value="Information about screen" id="btn" />
+    <form action="">
+      <div>
+        <label for="name">разрешение по ширине</label>
+        <input type="text" value="" readonly/>
+      </div>
+      <div>
+        <label for="name">разрешение по высоте</label>
+        <input type="text" value="" readonly/>
+      </div>
+      <div>
+        <label for="name">ширина рабочей области</label>
+        <input type="text" value="" readonly/>
+      </div>
+      <div>
+        <label for="name">высота рабочей области</label>
+        <input type="text" value="" readonly/>
+      </div>
+    </form>
+    <a href="./3.html">next page</a>
+    <a id="back" href="">back</a>
+  </body>
+  <script>
+    btn.onclick = function () {
+      let text = document.querySelectorAll("input[type='text']");
+      let propertiesScreen = [
+        screen.width,
+        screen.height,
+        screen.availWidth,
+        screen.availHeight,
+      ];
+      for (let i = 0; i < text.length; i++) {
+        text[i].value = propertiesScreen[i];
+      }
+    };
+    back.onclick = function () {
+      window.history.back();
+      return false;
+    };
+  </script>
+</html>

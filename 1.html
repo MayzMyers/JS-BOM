@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Информация о браузере</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <input type="button" value="Information" id="btn" />
+    <form action="">
+      <textarea id="textarea" placeholder="" rows="5" cols="50" readonly></textarea>
+    </form>
+    <a href="./2.html">next page</a>
+    <script>
+      btn.addEventListener("click", function () {
+        textarea.placeholder = `${navigator.appName} \n${navigator.appVersion}`;;
+      });
+    </script>
+  </body>
+</html>
